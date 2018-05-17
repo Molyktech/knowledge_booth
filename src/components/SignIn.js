@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 import { SignUpLink } from './SignUp';
 import { ForgotPasswordLink } from './ForgotPassword';
 import { auth } from '../firebase';
 import * as routes from '../routes/routes';
-
+import { ForgotPasswordLink } from './ForgotPassword';
 
 const SignInPage = ({ history }) =>
   <div>
@@ -15,14 +15,14 @@ const SignInPage = ({ history }) =>
     <SignUpLink />
   </div>
 
-const byPropKey = (propertyName, value) => () =>({
-  [propertyName]: value
+const byPropKey = (propertyName, value) => () => ({
+  [propertyName]: value,
 });
 
-const INITIAL_STATE ={
+const INITIAL_STATE = {
   email: '',
   password: '',
-  error: null
+  error: null,
 };
 
 class SignInForm extends Component {

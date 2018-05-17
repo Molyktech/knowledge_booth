@@ -11,13 +11,32 @@ import SignInPage from './SignIn';
 import './App.css';
 
 import * as routes from '../routes/routes';
+import { firebase } from  '../firebase';
 
 class App extends Component {
+  //temporarily handle state of an authenticated user till i learn redux
+  constructor (props){
+    super(props);
+
+    this.state = {
+      authUser: null
+    };
+
+  }
+
+  componentDidMount(){
+    //firebase listener for authenticated user
+    firebase.auth.onAuthStateChanged(authUser => {
+      authUser
+        ? this.setState(() => ({ authUser }))
+        : this.setState(() => ({ authUser: null}));
+    });
+  }
   render() {
     return (
       <Router>
         <div>
-          <Navigation />
+          <Navigation  authUser={this.state.authUser} />
           <hr />
           <Route
             exact path={routes.LANDING} component={LandingPage}

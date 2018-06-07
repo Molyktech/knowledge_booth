@@ -1,12 +1,20 @@
-import React, { Component } from 'react'
-import withAuthorization from './withAuthorization';
+import React, { Component } from 'react';
+import Teachers from './Teachers';
+import Landing from './Landing'
 
-const HomePage = () =>
-  <div>
-    <h1>Home Page</h1>
-    <p>The Home Page is accessible by every signed in user.</p>
-  </div>
+export default class HomePage extends Component {
+  render() {
+    return (
+      <div>
+        <Landing />
+        <Teachers />
+        
+      </div>
+    )
+  }
+}
 
-const authCondition = (authUser) => !!authUser;
 
-export default withAuthorization(authCondition)(HomePage);
+  
+
+

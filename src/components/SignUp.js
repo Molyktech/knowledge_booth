@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom';
-import { auth } from '../firebase';
-
 
 import * as routes from '../routes/routes';
+//add another API request to create a user when the user signed up successfully.
+import { auth, db } from '../firebase';
+
+const buttonStyle ={
+    textAlign: 'center'
+}
+const center ={
+    textAlign:'center'
+}
+
 
 const SignUpPage = ({ history }) =>
     <div>
-        <h1>Sign Up</h1>
+        <h1 style={center}>Sign Up</h1>
         <SignUpForm  history={history} />
     </div>
 
@@ -32,8 +40,16 @@ class SignUpForm extends Component {
         const { history } = this.props;
         auth.doCreateUserWithEmailAndPassword(email, passwordOne)
         .then(authUser => {
+
+            // create a user in my accessible firebase
+            db.doCreateUser(authUser.user.uid, username, email)
+            .then(() => {
             this.setState(() => ({ ...INITIAL_STATE}));
             history.push(routes.HOME);
+        })
+            .catch(error => {
+                this.setState(byPropKey('error', error))
+            });
         })
         .catch(error => {
             this.setState(byPropKey('error', error));
@@ -49,33 +65,55 @@ class SignUpForm extends Component {
       email === '' ||
       username === '';
     return (
-      <form onSubmit={this.onSubmit}>
-        <input 
-            value={username}
-            onChange={event => this.setState(byPropKey('username', event.target.value))}
-            type="text"
-            placeholder="Please type your Full Name"
-        />
-         
-         <input 
-            value={email}
-            onChange={event => this.setState(byPropKey('email', event.target.value))}
-            type="email"
-            placeholder="Please type your Email Address"
-        />
-         <input 
-            value={passwordOne}
-            onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
-            type="password"
-            placeholder="Please type your Password"
-        />
-        <input 
-            value={passwordTwo}
-            onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
-            type="password"
-            placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="submit">SIGN UP</button>
+      <form onSubmit={this.onSubmit} className="container" >
+        <div className="form-group mx-auto">
+            <label for="usr">Full Name:</label>
+                <input 
+                    value={username}
+                    onChange={event => this.setState(byPropKey('username', event.target.value))}
+                    type="text"
+                    placeholder="Please type your Full Name"
+                    className="form-control"
+                    
+                />
+        </div>
+        <div className="form-group">
+            <label for="email">Email:</label>
+                <input 
+                    value={email}
+                    onChange={event => this.setState(byPropKey('email', event.target.value))}
+                    type="email"
+                    placeholder="Please type your Email Address"
+                    className="form-control"
+                />
+        </div>
+        <div className="form-group">
+            <label for="pwd">Password:</label>
+                <input 
+                    value={passwordOne}
+                    onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
+                    type="password"
+                    placeholder="Type a secure password"
+                    className="form-control"
+                />
+        </div>
+        <div className="form-group">
+            <label for="pwd2">Confirm Password:</label>
+                <input 
+                    value={passwordTwo}
+                    onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
+                    type="password"
+                    placeholder="Confirm Password"
+                    className="form-control"
+                />
+        </div>
+        <div className="form-group" style={buttonStyle}>
+            <button 
+            className="btn btn-warning"
+            disabled={isInvalid} 
+            type="submit">SIGN UP
+            </button>
+        </div>
 
         {error && <p>{error.message}</p>}
       </form>
@@ -83,10 +121,10 @@ class SignUpForm extends Component {
   }
 }
 const SignUpLink =() =>
-<p>
-    Don't have an account?
+<p className="signup-link">
+    Not a member yet?
     {' '}
-    <Link to={routes.SIGN_UP}>Sign Up</Link>
+    <Link to={routes.SIGN_UP}>Register now</Link>
 
 </p>
 

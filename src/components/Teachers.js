@@ -10,7 +10,7 @@ const options = {
 export default class Teachers extends Component {
   render() {
     return (
-      <div>
+      <div className="teacher">
       
             <div className="container">
                 <div className="row">

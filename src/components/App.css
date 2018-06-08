@@ -338,6 +338,9 @@ and (-webkit-min-device-pixel-ratio: 2){
     .hero-box{
         margin-top: 2em;
     }
+    .teacher {
+        margin-top: 4em;
+    }
 }
 @media only screen and (min-width: 1200px)
 and (max-width: 1600px)

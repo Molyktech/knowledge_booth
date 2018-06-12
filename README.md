@@ -16,9 +16,16 @@ to gain from.
 GETTING STARTED  
 
 Clone the repo
+
 Navigate to the folder in your terminal
+
 #run npm install or yarn install
+
 #run npm start
+
+AUTHORS
+
+
 
 
 

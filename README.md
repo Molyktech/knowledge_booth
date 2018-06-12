@@ -8,11 +8,13 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 // components takes precedence over default styles.
 
 ```
-##KNOWLEDGE-BOOTH
+KNOWLEDGE-BOOTH
+
 Knowledge-booth is an online learning and teaching platform. A neutral ground for teachers to offer expertise and for student's
 to gain from.
 
 GETTING STARTED  
+
 Clone the repo
 Navigate to the folder in your terminal
 #run npm install or yarn install

@@ -5,11 +5,13 @@ import Cards from './Cards';
 import Solution from './Solution';
 import Client from './ClientSays';
 import Footer from './Footer'; 
+import Searchbar from './Searchbar';
 
 export default class HomePage extends Component {
   render() {
     return (
       <div>
+        <Searchbar />
         <Landing />
         <Cards />
         <Teachers />

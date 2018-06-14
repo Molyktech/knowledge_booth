@@ -24,11 +24,15 @@ const center ={
   fontWeight: 'bold'
 }
 const SignInPage = ({ history }) =>
+<div>
+  <SignInHeader />
   <div className="signin-form">
+   
     <h3 style={center}>Login With  Your Site Account</h3>
     <hr className="rule" />
     <SignInForm history={history} />
   </div>
+</div>
 
 const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value,
@@ -127,9 +131,44 @@ class SignInForm extends Component {
     );
   }
 }
+class SignInHeader extends Component{
+  render(){
+    return(
+      <div>
+          <div id="header" className="jumbotron">   
+          </div>
+          <div className="container mx-auto" id="signin-section" >
+              <h1 className="text-center">Log In With Your Social Accounts</h1>
+                  
+                      <div className="container">
+                          
+                          <div className="row mt-5 p-5" >
+                              <div className="col">
+                                  <a className=" btn btn-social btn-block btn-facebook fcbk">
+                                      <i className="fa fa-facebook pull-left"></i> Facebook
+                                  </a>
+                                  
+                              </div>
+                              <div className="col">
+                                  <a className="btn btn-social btn-block btn-google-plus google">
+                                      <i className="fa fa-google-plus"></i> Google
+                                  </a>
+                                                                  
+                              </div>
+                          </div>
+                      </div>
+                  
+          </div>
+        
+            
+      </div>
+    )
+  }
+}
 
 export default withRouter(SignInPage);
 
 export{
-  SignInForm
+  SignInForm,
+  SignInHeader
 };

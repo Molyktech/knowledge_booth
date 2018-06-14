@@ -13,7 +13,7 @@ import ForgotPasswordPage from './ForgotPassword';
 import HomePage from './Home';
 import AccountPage from './Account';
 import Users from './users';
-import Searchbar from './Searchbar';
+
 
 import * as routes from '../routes/routes';
 import withAuthentication from './withAuthentication';
@@ -22,7 +22,7 @@ const App = () =>
   <Router>
     <div>
       <Navigation />
-      <Searchbar />
+      
 
 
       <Route exact path={routes.LANDING} component={() => <LandingPage />} />

@@ -5,16 +5,16 @@ export default class Client extends Component {
     return (
       <div>
       <section id="testimonial-head">
-        <div class="container">
-            <div class="col-12">
-                <h3 class="title"> Client Says</h3>
+        <div className="container">
+            <div className="col-12">
+                <h3 className="title"> Client Says</h3>
             </div>
         </div>
     </section>
   <section id="testimonial">
-          <div class="container">
-              <div class="col-12">
-                  <p class="client">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, iure.</p>
+          <div className="container">
+              <div className="col-12">
+                  <p className="client">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, iure.</p>
               <p>-john</p>
               </div>
           </div>

@@ -27,6 +27,14 @@ a{
     text-align: center;
     margin-top: 1rem;
 }
+.login-link{
+    margin-top: 1rem;
+   
+}
+.login-link a,
+.signup-link a{
+    color: #ff6600;
+}
 
 .rule{
     width:100px;
@@ -464,6 +472,15 @@ i.red{
 	margin: 25px 0 50px;
 }
 /*****FOOTER ***/
+.subscribe{
+    background: #000 !important;
+    color:white;
+    border-radius: 5px;
+    width: 150px;
+    height: 35px;
+}
+
+
 .helpful-links{
 	overflow: hidden;
 
@@ -517,3 +534,90 @@ i.red{
   #link-two a{
 	  color: #000;
   }
+
+  /******SIGNUP PAGE**********/
+  /****HEADER****/
+  #header {
+    /* background: url('images/event-single.jpg');
+    background-repeat: no-repeat;
+    background-position: contain;
+    background-size: cover; */
+    height: 300px;
+
+}
+#register,
+#signin-section{
+    background: #ccc;
+  
+}
+/***student or teacher**/
+.square{
+    border: 1px solid #fff;
+    background-color: #fff;
+    width: 100px;
+    margin: 0 auto;
+    height: 100px;
+
+}
+.img-text{
+    text-align: justify;
+    padding: 10px;
+}
+@media screen and (max-width: 320px){
+    .square{
+        margin-bottom: 30px;
+
+    }
+    .img-text{
+        padding: 10px;
+    }
+}
+/***social buttons***/
+.btn-social{
+    position:relative;
+    padding-left:44px;
+    text-align:center;
+    /* white-space:nowrap;
+    overflow:hidden;*/
+    text-overflow:ellipsis;
+    }
+.btn-social :first-child{
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:32px;
+    line-height:34px;
+    font-size:1.6em;
+    text-align:center;
+    border-right:1.3px solid #e6e4e5;
+}
+
+.btn-facebook{
+    background-color:#3b5998;
+    color: #fff;
+    border-color:rgba(0,0,0,0.2);
+}
+
+.btn-google-plus{
+    color:#fff;
+    background-color:#dd4b39;
+    border-color:rgba(0,0,0,0.2)
+    }
+
+.btn{
+    color: white !important;
+}
+.fcbk,
+.google{
+    width: 200px;
+}
+
+@media screen and (max-width: 700px){
+    .btn{
+        margin-bottom: 10px;
+        width: 200px;
+        text-align: center;
+        margin-left: -15px;
+    }
+}

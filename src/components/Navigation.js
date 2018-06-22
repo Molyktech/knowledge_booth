@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import TopNav from './TopNav';
 import NavAuth from './NavAuth';
 import NavNonAuth from './NavNonAuth';
+import DashNav from './Dashboard/DashNav';
+
 
 //import * as routes from '../routes/routes';
 
@@ -10,7 +12,11 @@ const Navigation = ({ authUser}) =>
 <div>
   <TopNav />
   {authUser 
-    ?  <NavAuth /> 
+    ?  
+      <div>
+          <NavAuth />
+          <DashNav />
+       </div>
     : <NavNonAuth />
   }
 </div>

@@ -40,6 +40,9 @@ export default class NavAuth extends Component {
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
+                    <NavItem>
+                        <NavLink to={routes.HOME} className="nav-link link">Home</NavLink>
+                    </NavItem>
                    
                     <NavItem>
                         <NavLink to="" className="nav-link link">About Us</NavLink>
@@ -48,7 +51,7 @@ export default class NavAuth extends Component {
                         <NavLink to={routes.ACCOUNT} className="nav-link link">Account</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="" className="nav-link link">Signup</NavLink>
+                        <NavLink to={routes.SIGN_UP} className="nav-link link">Signup</NavLink>
                     </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>

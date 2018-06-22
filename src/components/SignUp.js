@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom';
+import Footer from './Footer';
 
 import * as routes from '../routes/routes';
 //add another API request to create a user when the user signed up successfully.
@@ -23,6 +24,7 @@ const SignUpPage = ({ history }) =>
     <div>
         <RegisterHeader />
         <RegisterBody history = {history} />
+        <Footer />
        
     </div>
 

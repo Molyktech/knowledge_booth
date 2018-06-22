@@ -2,9 +2,33 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase';
 
+const center ={
+  textAlign:'center',
+  fontWeight: 'bold',
+  marginTop: '18px'
+}
+const buttonStyle ={
+  width: '100%',
+  background: '#FF6E01',
+  textAlign: 'center',
+  color: '#FFF',
+  borderRadius:'2px',
+  height: '40px',
+  boxShadow: 'none',
+  marginTop: '-5px'
+  
+}
+const FormContainer={
+  width: '500px',
+  border: '1px solid #ff6600',
+  background: '#FEFEFA',
+  margin: '50px 10px',
+  borderRadius: '5px'
+}
 const ForgotPasswordPage = () => 
-<div>
-  <h1>Forgot Password?</h1>
+<div style={FormContainer}  className="container mx-auto">
+  <h1 style={center}>Forgot Password?</h1>
+  <p className="text-center">Enter your email and we would send you a link to reset your Password</p>
   <ForgotPasswordForm />
 </div>
 
@@ -38,14 +62,21 @@ class ForgotPasswordForm extends Component {
     const { email, error } = this.state;
     const isInvalid = email === '';
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} className="container mx-auto">
         <input
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="email"
           placeholder= "Email Address"
+          className="form-control"
         />
-        <button disabled={isInvalid} type="submit"> Reset My Password</button>
+        <div className="form-group mx-auto">
+        <button 
+        disabled={isInvalid} 
+        style={buttonStyle}
+        type="submit"
+        > Reset My Password</button>
+        </div>
 
         { error && <p>{error.message}</p> }
       </form>

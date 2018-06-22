@@ -5,6 +5,7 @@ import { SignUpLink } from './SignUp';
 import { ForgotPasswordLink } from './ForgotPassword';
 import { auth } from '../firebase';
 import * as routes from '../routes/routes';
+import Footer from './Footer';
 
 
 
@@ -32,6 +33,7 @@ const SignInPage = ({ history }) =>
     <hr className="rule" />
     <SignInForm history={history} />
   </div>
+  <Footer />
 </div>
 
 const byPropKey = (propertyName, value) => () => ({
@@ -63,7 +65,7 @@ class SignInForm extends Component {
       if (this.state.checked){
         localStorage.setItem("token", user.uid)
       }
-      history.push(routes.HOME);
+      history.push(routes.DASHBOARD);
       
     })
     .catch(error => {

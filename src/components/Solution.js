@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 
+const icon = {
+    width: '20px',
+    height: '20px'
+  }
+
 export default class Solution extends Component {
   render() {
     return (
@@ -24,7 +29,7 @@ export default class Solution extends Component {
                       </li>
                       <li className="solution-link">
                           <a href="Solution.html" className="solution-library">View more <span>
-                              <img src="images/forward.png" alt="arrow" />
+                              <img src="images/right-chevron-.svg" alt="arrow" style={icon}/>
                           </span></a>
                       </li>   
                     </ol>
@@ -48,7 +53,7 @@ export default class Solution extends Component {
                           </li>
                           <li>
                                   <a href="Solution.html" className="solution-library">View more <span>
-                                      <img src="images/forward.png" alt="arrow" />
+                                      <img src="images/right-chevron-.svg" alt="arrow" style={icon}/>
                                   </span></a>
                           </li> 
                       </ul>

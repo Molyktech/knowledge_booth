@@ -13,14 +13,14 @@ export default class Payment extends Component {
       <div>
             <div className="container">
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-md-4">
                         <ProfileCard />
                     </div>
-                    <div className="col-9">
+                    <div className="col-md-8">
                         <div  className="">
                             <h3  className="session-title">MY PAYMENT</h3> 
                          </div>
-                        <table className="table table-hover table-responsive table-payment"  border='0'>
+                        <table className="table table-hover  table-payment table-bordered">
                             <thead className="thead-light">
                                 <tr>
                                     <th scope="col">Assignment/Session</th>

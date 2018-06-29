@@ -17,7 +17,7 @@ export default class Teachers extends Component {
                 <div className="row">
                     <div className="col-md-3 col-sm-3 animate-box profile">
                         <div className="trainers-entry img-box">
-                            <div className="item"><img  className="professor" alt="teacher" src="images/person2.jpg"/></div>
+                            <div className="item"><img  className="professor" alt="teacher" src="images/person1.jpeg"/></div>
                             <ul className="text-center">
                                 <a href=""><li><i className="fa fa-facebook"></i></li></a>
                                 <a href=""><li><i className="fa fa-twitter"></i></li></a>
@@ -32,7 +32,7 @@ export default class Teachers extends Component {
 				
                     <div className="col-md-3 col-sm-3 animate-box profile">
                         <div className="trainers-entry img-box">
-                            <div className="item"><img  className="professor" alt="teacher" src="images/person2.jpg"/></div>
+                            <div className="item"><img  className="professor" alt="teacher" src="images/person2.jpeg"/></div>
                             <ul className="text-center">
                                 <a href=""><li><i className="fa fa-facebook"></i></li></a>
                                 <a href=""><li><i className="fa fa-twitter"></i></li></a>
@@ -46,7 +46,7 @@ export default class Teachers extends Component {
                     </div>
 					<div className="col-md-3 col-sm-3 animate-box profile">
 						<div className="trainers-entry img-box">
-                            <div className="item"><img  className="professor" alt="teacher" src="images/person2.jpg"/></div>
+                            <div className="item"><img  className="professor" alt="teacher" src="images/person1.jpeg"/></div>
                             <ul className="text-center">
                                 <a href=""><li><i className="fa fa-facebook"></i></li></a>
                                 <a href=""><li><i className="fa fa-twitter"></i></li></a>
@@ -61,7 +61,7 @@ export default class Teachers extends Component {
 					
 					<div className="col-md-3 col-sm-3 animate-box profile">
 						<div className="trainers-entry img-box">
-                            <div className="item"><img  className="professor" alt="teacher" src="images/person2.jpg"/></div>
+                            <div className="item"><img  className="professor" alt="teacher" src="images/person2.jpeg"/></div>
                             <ul className="text-center">
                                 <a href=""><li><i className="fa fa-facebook"></i></li></a>
                                 <a href=""><li><i className="fa fa-twitter"></i></li></a>

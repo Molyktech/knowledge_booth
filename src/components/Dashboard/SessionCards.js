@@ -33,7 +33,7 @@ add(ths,sno){
             <div  className="card" style={CardStyle}>
                 <div  className="card-body">
                     <div  className="text-center">
-                        <h6  className="card-title text-center">DISCOVERY OF THE EARTH</h6>
+                        <h6  className="card-title text-center"><strong>DISCOVERY OF THE EARTH</strong></h6>
                         <p  className="card-text text-center">9:30 AM</p>
                         <p  className="date">12/03/2018</p>
                     

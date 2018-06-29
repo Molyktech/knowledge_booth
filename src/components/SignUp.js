@@ -49,7 +49,7 @@ class RegisterHeader extends Component {
     render(){
         return(
         <div>
-                <div id="header" className="jumbotron">   
+                <div id="header" className="jumbotron" style={{marginBottom: 0}}>   
                 </div>
               
             
@@ -130,19 +130,19 @@ class RegisterBody extends Component{
                         <div className="container">
                             
                             <div className="row mt-5 p-5" >
-                                <div className="col">
+                                <div className="col-md-4">
                                     <a className=" btn btn-social btn-block btn-facebook">
                                         <i className="fa fa-facebook pull-left"></i> Facebook
                                     </a>
                                     
                                 </div>
-                                <div className="col">
+                                <div className="col-md-4">
                                      <a className="btn btn-social btn-block btn-google-plus">
                                         <i className="fa fa-google-plus"></i> Google
                                     </a>
                                                                     
                                 </div>
-                                <div className="col">
+                                <div className="col-md-4">
                                     <a className="btn btn-social btn-twitter  btn-block btn-warning">
                                         <i className="fa fa-twitter"></i> Mali Account
                                     </a>

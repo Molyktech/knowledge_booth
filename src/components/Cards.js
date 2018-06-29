@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 
+const cardStyle = {
+  width: '200px'
+}
+
 export default class Cards extends Component {
   render() {
     return (
       <div>
       <div className="container">
       <div className="row">
-          <div className="card box">
+          <div className="col-md-4 sm-4 card box" style={cardStyle}>
               <div className="card-body">
                <div className="row">
                 <div className="col-6">
@@ -18,12 +22,12 @@ export default class Cards extends Component {
                  </div>
                 
                 </div>
-                <a href="" className="card-link">View more<span><img src="images/images/read-more.png" alt="read more icon" />
+                <a href="" className="card-link">View more<span><img src="images/chevron-read-more.svg" alt="arrow"/>
                 </span></a>
                 
               </div>
             </div>
-            <div className="card box">
+            <div className=" col-md-4 sm-4 card box" style={cardStyle}>
               <div className="card-body">
                <div className="row">
                 <div className="col-6">
@@ -35,12 +39,12 @@ export default class Cards extends Component {
                  </div>
                 
                 </div>
-                <a href="" className="card-link">View more<span><img src="images/images/read-more.png" alt="read more icon" />
+                <a href="" className="card-link">View more<span><img src="images/chevron-read-more.svg" alt="arrow"/>
                 </span></a>
                 
               </div>
             </div>
-            <div className="card box">
+            <div className="col-md-4 sm-4 card box" style={cardStyle}>
               <div className="card-body">
                <div className="row">
                 <div className="col-6">
@@ -52,7 +56,7 @@ export default class Cards extends Component {
                  </div>
                 
                 </div>
-              <a href="" className="card-link">View more<span><img src="images/images/read-more.png" alt="read more icon" />
+              <a href="" className="card-link">View more<span><img src="images/chevron-read-more.svg" alt="arrow"/>
               </span></a>
                 
               </div>

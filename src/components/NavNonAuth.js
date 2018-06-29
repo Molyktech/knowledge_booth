@@ -36,7 +36,7 @@ return (
     <div>
         <Navbar expand="md" className="navbar">
             <div className="container">
-                <NavbarBrand href="/home">
+                <NavbarBrand href="/home" className="knowledgeBooth-logo">
                    Knowledge Booth
                 </NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
@@ -45,19 +45,17 @@ return (
                         <NavItem>
                             <NavLink  className="nav-link link" to={routes.HOME}>Home</NavLink>
                         </NavItem>
+                        
                         <NavItem>
-                            <NavLink  className="nav-link link" to={routes.LANDING}>Landing</NavLink>
+                            <NavLink  className="nav-link link" to="">About us</NavLink>
                         </NavItem>
                        
                        
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
-                                    About Us
+                                    How it works
                                 </DropdownToggle>
                                 <DropdownMenu right>
-                                    <DropdownItem>
-                                        How it works
-                                    </DropdownItem>
                                     <DropdownItem>
                                         Public Forum
                                     </DropdownItem>

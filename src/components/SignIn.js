@@ -22,7 +22,8 @@ const buttonStyle ={
 }
 const center ={
   textAlign:'center',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  marginTop: '10px'
 }
 const SignInPage = ({ history }) =>
 <div>
@@ -137,21 +138,21 @@ class SignInHeader extends Component{
   render(){
     return(
       <div>
-          <div id="header" className="jumbotron">   
+          <div id="header" className="jumbotron" style={{marginBottom: 0}}>   
           </div>
           <div className="container mx-auto" id="signin-section" >
               <h1 className="text-center">Log In With Your Social Accounts</h1>
                   
                       <div className="container">
                           
-                          <div className="row mt-5 p-5" >
-                              <div className="col">
+                          <div className="row mt-5 p-5">
+                              <div className="col-md-6 d-flex justify-content-center">
                                   <a className=" btn btn-social btn-block btn-facebook fcbk">
                                       <i className="fa fa-facebook pull-left"></i> Facebook
                                   </a>
                                   
                               </div>
-                              <div className="col">
+                              <div className="col-md-6  d-flex justify-content-center">
                                   <a className="btn btn-social btn-block btn-google-plus google">
                                       <i className="fa fa-google-plus"></i> Google
                                   </a>

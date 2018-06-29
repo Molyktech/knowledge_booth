@@ -129,9 +129,12 @@ a{
     transition: width .3s;
 }
 /*navbrand logo*/
-.kblogo{
-    width: 150px;
-    height: 64px;
+
+.knowledgeBooth-logo{
+    /* width: 150px;
+    height: 64px; */
+    padding-left: 0.8em;
+
 }
 .carousel-item > img{
     width:100%;
@@ -175,6 +178,17 @@ a{
   
    
 }
+@media screen and (max-width: 1024px){
+    #input {
+        left:auto;
+        position: absolute;
+    }
+    #search{
+        position: relative;
+        left: -120px;
+    }
+    
+}
 @media screen and (max-width: 760px){
     #searchform{
         display: none;
@@ -200,13 +214,15 @@ a{
 .jumbotron{
     height:100vh;
     width:100%;
-    /* background: url('images/banner1.jpg');
+    background: url('/images/banner1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; */
+    background-position: center; 
+    color: #fff;
 }
 
-/*content of the jumbotron*/
+
+/*content/text of the jumbotron*/
 .content{
     position: relative;
     top: 50%;
@@ -225,91 +241,38 @@ a{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5;
 }
-/* tiny cards on the jumbotron*/
-.box{
-	display: inline-block;
-	margin: 10px;
-	background-color: #1a1a1a !important;
-	position: absolute;
-	top: -180px;
-	left: 70px; 
 
-	align-content: center;
- }
- .box-text{
-	 color: #fff
- }
-.box img{
-	width: 72px;
-	height: auto;
-}
-.card-link img,
-.solution-library img{
-	width: 10px;
-	height: 10px;
+/*****tiny cards on the jumbotron****/
+.card-box{
+    margin-right: 10px;
 }
 .card-link{
-	float: right;
-	color: #ff6600
+    color: #ff6600;
 }
-.arrows img{
-	width: 40px;
-	height: 40px;
-	
+.transparent-card {
+    /* position: relative;
+    top: -250px  */
+    /* margin-top: -220px; */
+    position: absolute;
+    top: 700px;
+    left: 200px;
 }
-.arrows{
-	float: right;
-}
-
-@media screen and(max-width:760px){
-.box{
-	position: relative;
-	top: auto;
-	left: auto;
-    display: none;
-    width: 18rem;
-}
-}
-@media only screen and (max-width: 575px)
-{
-    .content
-	{
-		padding-top: 17px;
-	    padding-bottom: 11px;
-	    padding-left: 22px;
-	    padding-right: 24px;
-	}
-	.content h2
-	{
-		font-size: 30px;
-    }
-    .content h3{
-        font-size: 18px;
-    }
-}
-
-@media only screen and (max-width: 479px){
- 
-}
-@media only screen and (min-width: 768px)
-and (max-width: 1024px)
-and (-webkit-min-device-pixel-ratio: 2){
-   
-} 
-@media screen and (min-width:320px) and (max-width: 800px){
+@media screen and (max-width:1100px) {
+        .transparent-card{
+            display: none;
+        }
+            /*
+        /* margin-top: auto; 
+        position: initial;
+        top: auto;
     
-   
-}
-@media only screen and (min-width: 1200px)
-and (max-width: 1600px)
-and (-webkit-min-device-pixel-ratio: 1){
+    }
     
-} 
-@media only screen and (min-width: 375px) and (max-width: 667px){
-   
+    .card-link{
+        margin-top: 50px;
+    } */
 }
-
-/*cards*/
+/*teacher*/
 /*****/
 .profile .img-box{
 	opacity: 1;
@@ -443,7 +406,7 @@ i.red{
 /*******SOLUTION AND PUBLIC FORUM***/
 #solution{
     margin-top: 10px;
-    /* background: url("images/laptop.jpeg"); 
+    /*background: url("/images/laptop.jpeg"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -480,12 +443,36 @@ i.red{
 	position: relative;
 	margin: 25px 0 50px;
 }
+
+/*******TESTIMONIAL ****/
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+blockquote{
+    text-align: center;
+    border: none;
+}
+.profile-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    
+}
+
+
 /*****FOOTER ***/
+/*footer-head */
+.form-group{
+    margin: 1.2rem 0 !important;
+}
 .subscribe{
     background: #000 !important;
     color:white;
     border-radius: 5px;
-    width: 150px;
+    width: 120px;
     height: 35px;
 }
 
@@ -663,10 +650,8 @@ div img.icon {
 } 
 .profile-card{
 	position: absolute;
-	 top: -30px;
-	 left: -20px;
-	 
-	
+     top: -30px;
+     /* left: 100px; */
 	
  }
  .icon-text{
@@ -700,9 +685,9 @@ div img.icon {
  margin-right: -20px;
  background: #fff;
  padding: 40px;
- -webkit-box-shadow: 0 2px 20px 0 rgba(0,0,0,.1); 
- box-shadow: 0 2px 20px 0 rgba(0,0,0,.1);
- border: 1px solid black;
+ -webkit-box-shadow: 0 2px 20px 0 rgba(88, 87, 87, 0.1); 
+ box-shadow: 0 2px 20px 0 rgba(94, 92, 92, 0.1);
+ border: 1px solid rgb(87, 87, 87);
 
  }
  /*stars*/
@@ -728,3 +713,130 @@ table.table.table-payment {
     border: 1px solid #DFDFDF;
     border-bottom: double #DFDFDF;
 }
+
+/***CALENDAR*****/
+
+  
+  /* Calendar */
+ main{
+     /* position: relative;
+    left: 300px; */
+ }
+  
+  .calendar {
+    display: block;
+    /* position: relative; */
+    width: 80%;
+    border: 1px solid gray; 
+  }
+  
+  .calendar .header {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 115%;
+    padding: 1.5em 0;
+    border-bottom: 1px solid gray;
+    background: #000;
+    color:#fff;
+  }
+  
+  .calendar .header .icon {
+    cursor: pointer;
+    transition: .15s ease-out;
+  }
+  
+  .calendar .header .icon:hover {
+    transform: scale(1.35);
+    transition: .25s ease-out;
+    
+  }
+  
+  .calendar .days {
+    text-transform: uppercase;
+    font-weight: 400;
+     color:black; 
+    font-size: 70%;
+    padding: 2em 0;
+    border-bottom: 1px solid gray;
+    background: rgb(187, 184, 184);
+  }
+  
+  .calendar .body .cell {
+    /* position: relative; */
+    height: 5em;
+    border-right: 1px solid gray;
+    overflow: hidden;
+    cursor: pointer;
+    /* background: ; */
+    transition: 0.25s ease-out;
+  }
+  
+  .calendar .body .cell:hover {
+    /* background: ); */
+    transition: 0.5s ease-out;
+  }
+  
+  .calendar .body .selected {
+    border-left: 10px solid transparent;
+    border-image: linear-gradient(45deg, #1a8fff 0%,#53cbf1 40%);
+    border-image-slice: 1;
+  }
+  
+  .calendar .body .row {
+    border-bottom: 1px solid gray;
+  
+  }
+  
+  .calendar .body .row:last-child {
+    border-bottom: none;
+  }
+  
+  .calendar .body .cell:last-child {
+    border-right: none;
+  }
+  
+  .calendar .body .cell .number {
+    /* position: absolute; */
+    font-size: 82.5%;
+    line-height: 1;
+    top: .75em;
+    right: .75em;
+    font-weight: 700;
+  }
+  
+  .calendar .body .disabled {
+    color: gray;
+    pointer-events: none;
+  }
+  
+  .calendar .body .cell .bg {
+    font-weight: 700;
+    line-height: 1;
+    color: #000 ; 
+    opacity: 0;
+    font-size: 8em;
+    position: absolute;
+    top: -.2em;
+    right: -.05em;
+    transition: .25s ease-out;
+    letter-spacing: -.07em;
+  }
+  
+  .calendar .body .cell:hover .bg, .calendar .body .selected .bg  {
+    opacity: 0.05;
+    transition: .5s ease-in;
+  }
+  
+  .calendar .body .col {
+    flex-grow: 0;
+    flex-basis: calc(100%/7);
+    width: calc(100%/7);
+  }
+  /*icon**/
+  .icon{
+    display: inline-block;
+  }
+  .col-end{
+      display: flex;
+      justify-content: flex-end;
+  }

@@ -13,7 +13,7 @@ export default class DashNav extends Component {
               <NavLink  className="nav-link active" to={routes.DASHBOARD}>Session</NavLink>
             </li>
             <li  className="nav-item">
-              <a  className="nav-link" href="">Calendar</a>
+              <NavLink  className="nav-link" to={routes.CALENDAR}>Calendar</NavLink>
             </li>
             <li  className="nav-item">
               <a  className="nav-link" href="">My Orders</a>

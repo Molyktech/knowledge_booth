@@ -8,10 +8,10 @@ export default class Watchlist extends Component {
       <div>
         <div className="container">
             <div className="row">
-                <div className="col-3">
+                <div className="col-md-4">
                     <ProfileCard />
                 </div>
-                <div className="col-9">
+                <div className="col-md-8">
 
                         <table class="table table-hover table-responsive">
                         <thead class="thead-light">

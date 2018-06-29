@@ -16,6 +16,7 @@ import Users from './users';
 import Dashboard from './Dashboard/Dashboard';
 import Watchlist from  './Dashboard/Watchlist';
 import Payment from './Dashboard/Payment';
+import Calendar from './Dashboard/Calender'
 
 import * as routes from '../routes/routes';
 import withAuthentication from './withAuthentication';
@@ -38,6 +39,7 @@ const App = () =>
       <Route exact path={routes.DASHBOARD} component={() => <Dashboard />} />
       <Route exact path={routes.MYWATCHLIST} component={() => <Watchlist />} />
       <Route exact path={routes.PAYMENT} component={() => <Payment />} />
+      <Route exact path={routes.CALENDAR} component={() => <Calendar />} />
     </div>
   </Router>
 

@@ -9,4 +9,4 @@ export const LANDING ='/'
 export const DASHBOARD = '/dashboard-session';
 export const MYWATCHLIST = '/dashboard-mywatchlist';
 export const PAYMENT = '/dashboard-payment';
-
+export const CALENDAR = '/calendar';
